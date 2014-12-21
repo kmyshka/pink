@@ -1,0 +1,60 @@
+@base-url: "../img/";
+@regular: 400;
+@bold: 700;
+@thin: 300;
+@x-width: 320px;
+@wrap-width: 280px;
+@pink: #d22856;
+@navy: #283645;
+
+@font-face{
+  font-family: gothamrounded; 
+  src: url(../fonts/Gotham-Rounded-Book.ttf);
+}
+
+.font(@color: #fff;
+      @font-size: 14px;
+      @font-weight: @bold;
+      @line-height: @font-size){
+        color: @color;
+        font-size: @font-size;
+        font-weight: @font-weight;
+        line-height: @line-height;
+}
+
+.backgr(@url: none;
+        @imgrepeat: no-repeat;
+        @imgpos-x: 0;
+        @imgpos-y: 0){
+  background: @arguments;
+  background-size: auto;
+}
+
+.margpad(@margin: 0 ; @padding: 0) {
+  padding: @padding;
+  margin: @margin;
+}
+
+.clearboth(@content: ""; @display: table; @clear: both){
+  content: @content;
+  display: @display;
+  clear:  @clear;
+}
+
+.link(@text-decoration: none;
+      @text-transform: uppercase;
+      @padding: 17px 0 15px;
+      @text-align: center){
+  text-decoration: @text-decoration;
+  text-transform: @text-transform;
+  padding: @padding;
+  text-align: @text-align; 
+}
+
+.col-transp(@color, @alpha: 1) {
+  color: rgba( red(@color), green(@color), blue(@color), @alpha);
+}
+
+.bg-transp(@color, @alpha: 1) {
+  background: rgba( red(@color), green(@color), blue(@color), @alpha);
+}

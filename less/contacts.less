@@ -1,0 +1,53 @@
+.contacts{
+  position: relative;
+  text-align: center;
+  padding: 20px 0 0;
+    box-shadow: 
+    inset 1px 0 0 0 black,
+    inset -1px 0 0 0 black;
+  background: url("@{base-url}map.jpg") no-repeat 0 100%;
+  background-size: contain;
+  
+  &__wrapper{
+  .margpad(0 auto);
+  width: @wrap-width;
+  }
+  
+  &__slogan{
+    .font(@navy, 24px, @thin, 28px);
+    margin-bottom: 34px;
+  }
+  
+  &__info{
+  .margpad(0, @padding: 0 0 200px);
+  list-style: none;
+  }
+  
+  &__item{
+  margin-bottom: 30px;
+  }
+  
+  &__title{
+    .font(@navy, 18px, @bold, 20px);
+    margin-bottom: 5px;
+  }
+  
+  &__phone,  &__email,  &__address{
+  .margpad();
+  .font(@pink, 24px, @thin, 28px);
+
+ }
+  
+  &::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 160px solid transparent; /* Прозрачные границы */
+  border-top: 28px solid #fff;
+  left: 0;
+  bottom: 14px;
+  z-index: 10;
+  }
+  
+}
